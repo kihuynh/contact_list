@@ -8,8 +8,8 @@ describe('contacts') do
    end
 
    it("Save an item to the list") do
-    name =  Contact.new("joe")
-    name.save()
+    name1 =  Contact.new("joe")
+    name1.save()
    expect(Contact.all()).to(eq([name1]))
     end
 end

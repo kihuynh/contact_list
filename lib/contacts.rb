@@ -15,7 +15,7 @@ class Contact
     @@list
   end
 
-  # def save
-  #   @@list.push(self)
-  # end
+  def save
+    @@list.push(self)
+  end
 end
