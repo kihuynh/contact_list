@@ -4,6 +4,7 @@ also_reload('lib/**.*.rb')
 require('pry')
 
 get('/') do
+  @@list = Contact.all()
   erb(:input)
 end
 

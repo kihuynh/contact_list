@@ -3,11 +3,12 @@
 class Contact
   @@list = []
 
-  def initialize(name1)
+  def initialize(name1, name2, address, job)
     @name1 = name1
-    # @name2 = name2
-    # @address = address
-    # @job = job
+    @name2 = name2
+    @address = address
+    @job = job
+    @id = @@list.length + 1
   end
 
 
@@ -15,7 +16,7 @@ class Contact
     @@list
   end
 
-  def save
+  def save()
     @@list.push(self)
   end
 end
