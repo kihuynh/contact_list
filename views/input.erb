@@ -6,24 +6,34 @@
 
 <h4>Add an item to the list:</h4>
 <div class="jumbotron">
-<form action="/" method="post">
-  <div class="form-group">
-    <label for="name1">First Name</label>
-    <input id="name1" name="name1" class="form-control" type="text">
+  <form action="/" method="post">
+    <div class="form-group">
+      <label for="name1">First Name</label>
+      <input id="name1" name="name1" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label for="name2">Last Name</label>
+      <input id="name2" name="name2" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input id="address" name="address" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label for="job">Job</label>
+      <input id="job" name="job" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn">Go!</button>
+    <button type="button" class="btn btn-danger" id="extra_address">Add another address</button>
+  </form>
+</div>
+<div class="hide" id="extra_show">
+  <div class="jumbotron">
+    <form action="/" method="post">
+      <div class="form-group">
+        <label for="address2">Address</label>
+        <input id="address2" name="address2" class="form-control" type="text">
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="name2">Last Name</label>
-    <input id="name2" name="name2" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="address">Address</label>
-    <input id="address" name="address" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="job">Job</label>
-    <input id="job" name="job" class="form-control" type="text">
-  </div>
-  <button type="submit" class="btn">Go!</button>
-</form>
-
 </div>

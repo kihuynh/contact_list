@@ -1,3 +1,7 @@
+.hide{
+  display: none;
+}
+
 body{
   background-color: lightsalmon;
 }
@@ -15,7 +19,3 @@ body{
 .jumbotron{
   background-color: skyblue;
 }
-
-/*.address_title {
-  text-align: center;
-}*/
