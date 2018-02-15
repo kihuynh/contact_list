@@ -1,7 +1,7 @@
 <h2 class="input_title">Contact List</h2>
 
 <% @list.each do |item| %>
-  <h4><a href="/output/<%= item.id %>"><%= item.name1 + " " + item.name2 %></a></h4>
+  <h4 class="output"><a href="/output/<%= item.id %>"><%= item.name1 + " " + item.name2 %></a></h4>
 <% end %>
 
 <h4>Add an item to the list:</h4>

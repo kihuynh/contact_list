@@ -5,12 +5,17 @@ body{
 .input_title {
   text-align: center;
   font-style: italic;
+  margin-bottom: 40px;
 }
 
+.output {
+  text-align: center;
+  font-size: 25px;
+}
 .jumbotron{
   background-color: skyblue;
 }
 
-.address_title {
-  color: 
-}
+/*.address_title {
+  text-align: center;
+}*/
