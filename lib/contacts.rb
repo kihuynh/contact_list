@@ -3,17 +3,14 @@
 class Contact
   @@list = []
 
-   attr_accessor :name1
-   attr_accessor :name2
-   attr_accessor :address
-   attr_accessor :job
+   attr_accessor :name1, :name2, :address, :job
    attr_reader :id
 
-  def initialize(name1, name2, address, job)
-    @name1 = name1
-    @name2 = name2
-    @address = address
-    @job = job
+  def initialize(attributes)
+    @name1 = attributes.fetch(:name1)
+    @name2 = attributes.fetch(:name2)
+    @address = attributes.fetch(:address)
+    @job = attributes.fetch(:job)
     @id = @@list.length + 1
   end
 
@@ -22,7 +19,20 @@ class Contact
     @@list
   end
 
+  def self.clear()
+    @@list = []
+  end
+
   def save()
     @@list.push(self)
+  end
+
+  def self.find(id)
+    item_id = id.to_i()
+    @@list.each do |item|
+      if item.id == item_id
+       return item
+      end
+    end
   end
 end

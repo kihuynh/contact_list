@@ -1,10 +1,10 @@
 require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
-require('./lib/contact')
+require('./lib/contacts')
 
 get('/') do
-  @list = Item.all()
+  @list = Contact.all()
   erb(:input)
 end
 
@@ -13,8 +13,13 @@ post('/') do
   name2 = params["name2"]
   address = params["address"]
   job = params["job"]
-  item = Item.new(name1, name2, address, job)
+  item = Contact.new({:name1 => name1, :name2 => name2, :address => address, :job => job})
   item.save()
-  @list = Item.all()
+  @list = Contact.all()
+  erb(:input)
+end
+
+get('/output/:id') do
+  @item = Contact.find(params[:id])
   erb(:output)
 end

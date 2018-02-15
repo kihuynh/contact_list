@@ -1,11 +1,11 @@
-<h2>Contact List</h2>
+<h2 class="input_title">Contact List</h2>
 
 <% @list.each do |item| %>
-  <p><%= item.name %></p>
+  <h4><a href="/output/<%= item.id %>"><%= item.name1 + " " + item.name2 %></a></h4>
 <% end %>
 
 <h4>Add an item to the list:</h4>
-
+<div class="jumbotron">
 <form action="/" method="post">
   <div class="form-group">
     <label for="name1">First Name</label>
@@ -25,3 +25,5 @@
   </div>
   <button type="submit" class="btn">Go!</button>
 </form>
+
+</div>
