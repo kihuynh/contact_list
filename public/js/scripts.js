@@ -1,7 +1,7 @@
-$(document).ready(function(event){
-  $("#extra_address").click(function(event){
+$(document).ready(function() {
+  $('#extra_show').click(function(event) {
     event.preventDefault();
-    $("#extra_show").show();
+    $('#extra_address').show();
 
   });
 });
